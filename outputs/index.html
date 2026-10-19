@@ -1,0 +1,2674 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080a09" />
+  <meta name="author" content="徐芷若" />
+  <meta name="description" content="徐芷若的个人作品集 — 广告学应届生，聚焦品牌运营、内容运营与文案策划，擅长新媒体排版、品牌活动与 AI 内容工作流。开放 2027 届秋招机会。" />
+  <title>徐芷若 - 品牌运营 / 内容运营 / 文案策划作品集</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" sizes="any" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:title" content="徐芷若 - 品牌运营 / 内容运营 / 文案策划作品集" />
+  <meta property="og:description" content="广告学应届生，品牌运营 × 内容策划 × 文案表达。5 个完整品牌案例，开放秋招机会。" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="徐芷若 - 品牌运营 / 内容运营 / 文案策划作品集" />
+  <meta name="twitter:description" content="广告学应届生，品牌运营 × 内容策划 × 文案表达。5 个完整品牌案例，开放秋招机会。" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "徐芷若",
+      "jobTitle": "品牌运营 / 内容运营 / 文案策划",
+      "email": "XovoeQ525@outlook.com",
+      "telephone": "18955205226",
+      "description": "广告学应届生，聚焦品牌运营、内容运营与文案策划，擅长新媒体排版、品牌活动与 AI 内容工作流。",
+      "knowsAbout": ["品牌运营", "内容运营", "文案策划", "新媒体排版", "品牌活动", "受众洞察", "AI 内容创作"]
+    }
+  </script>
+
+  <!-- 01. 主题初始化：默认深色，记住用户上一次的选择 -->
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      const savedTheme = localStorage.getItem('xuzhiruo-theme');
+      const useLight = savedTheme === 'light';
+      document.documentElement.classList.toggle('light', useLight);
+      document.documentElement.classList.toggle('dark', !useLight);
+    } catch (error) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CDN：直接打开即可运行；正式上线时可换成构建后的 CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Manrope', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+            editorial: ['Instrument Serif', 'Georgia', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* =========================================================
+       Design tokens
+       ========================================================= */
+    :root {
+      --bg: #f2efe7;
+      --bg-2: #e9e4d8;
+      --surface: rgba(255, 255, 255, 0.58);
+      --surface-solid: #fbfaf6;
+      --surface-2: #efebe2;
+      --text: #151613;
+      --muted: #64685e;
+      --line: rgba(21, 22, 19, 0.13);
+      --accent: #c8ef5e;
+      --accent-strong: #557400;
+      --accent-ink: #101308;
+      --accent-soft: rgba(154, 190, 42, 0.14);
+      --shadow: 0 24px 80px rgba(30, 31, 24, 0.12);
+      --nav-bg: rgba(242, 239, 231, 0.78);
+      color-scheme: light;
+    }
+
+    .dark {
+      --bg: #080a09;
+      --bg-2: #0d100e;
+      --surface: rgba(255, 255, 255, 0.045);
+      --surface-solid: #111412;
+      --surface-2: #151915;
+      --text: #f1f0e7;
+      --muted: #989d93;
+      --line: rgba(255, 255, 255, 0.1);
+      --accent: #d7f56f;
+      --accent-strong: #d7f56f;
+      --accent-ink: #0b0d08;
+      --accent-soft: rgba(215, 245, 111, 0.1);
+      --shadow: 0 28px 100px rgba(0, 0, 0, 0.45);
+      --nav-bg: rgba(8, 10, 9, 0.72);
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--bg);
+      scroll-padding-top: 88px;
+      scroll-behavior: smooth;
+    }
+
+    #work,
+    #operations {
+      scroll-margin-top: 88px;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Manrope', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      transition: background-color 0.45s ease, color 0.45s ease;
+      animation: pageEnter 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    body.modal-open,
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: var(--accent-ink);
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: color-mix(in srgb, var(--muted) 35%, transparent);
+      border: 3px solid var(--bg);
+      border-radius: 999px;
+    }
+
+    .font-editorial {
+      font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+    }
+
+    /* =========================================================
+       Shared pieces
+       ========================================================= */
+    .grain {
+      position: fixed;
+      inset: -50%;
+      z-index: 90;
+      pointer-events: none;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.75'/%3E%3C/svg%3E");
+      transform: rotate(3deg);
+    }
+
+    .cursor-glow {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.45s ease;
+    }
+
+    main,
+    footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cursor-glow.is-active {
+      opacity: 1;
+    }
+
+    .cursor-glow span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 34rem;
+      height: 34rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(215, 245, 111, 0.15), rgba(215, 245, 111, 0.04) 38%, transparent 70%);
+      filter: blur(34px);
+      mix-blend-mode: screen;
+      transform: translate3d(-50%, -50%, 0);
+      transition: transform 0.16s ease-out;
+      will-change: transform;
+    }
+
+    .light .cursor-glow span {
+      background: radial-gradient(circle, rgba(126, 155, 35, 0.16), rgba(200, 239, 94, 0.06) 42%, transparent 72%);
+      mix-blend-mode: multiply;
+    }
+
+    .site-grid {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.42;
+      background-image: linear-gradient(to right, var(--line) 1px, transparent 1px);
+      background-size: calc(100% / 6) 100%;
+      mask-image: linear-gradient(to bottom, black, transparent 86%);
+      -webkit-mask-image: linear-gradient(to bottom, black, transparent 86%);
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(2px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .eyebrow::before {
+      content: '';
+      width: 1.65rem;
+      height: 1px;
+      background: var(--accent-strong);
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    .status-dot {
+      position: relative;
+      width: 7px;
+      height: 7px;
+      flex: 0 0 auto;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 65%, transparent);
+    }
+
+    .status-dot::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border: 1px solid var(--accent);
+      border-radius: inherit;
+      animation: statusPulse 2.4s ease-out infinite;
+    }
+
+    .page-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 80;
+      width: 100%;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      box-shadow: 0 0 14px var(--accent);
+      pointer-events: none;
+    }
+
+    /* Header */
+    #siteHeader {
+      border-bottom: 1px solid transparent;
+      transition: background-color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+    }
+
+    #siteHeader.is-scrolled,
+    body.menu-open #siteHeader {
+      border-color: var(--line);
+      background: var(--nav-bg);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 0.5rem 0;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--muted);
+      transition: color 0.25s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .nav-link:hover {
+      color: var(--text);
+    }
+
+    .nav-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .icon-button {
+      display: inline-grid;
+      width: 2.55rem;
+      height: 2.55rem;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--text);
+      background: transparent;
+      transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .icon-button:hover {
+      border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+      background: var(--accent-soft);
+      transform: rotate(-8deg);
+    }
+
+    .sun-icon,
+    .moon-icon {
+      position: absolute;
+      transition: opacity 0.3s ease, transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .dark .sun-icon {
+      opacity: 0;
+      transform: rotate(90deg) scale(0.5);
+    }
+
+    .dark .moon-icon {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+    }
+
+    .light .sun-icon {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+    }
+
+    .light .moon-icon {
+      opacity: 0;
+      transform: rotate(-90deg) scale(0.5);
+    }
+
+    .theme-toggle {
+      position: relative;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      top: 71px;
+      right: 0;
+      left: 0;
+      z-index: 40;
+      padding: 1.25rem 1.25rem 2rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg);
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-14px);
+      transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.35s;
+    }
+
+    .mobile-menu.is-open {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .mobile-menu a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0.25rem;
+      border-bottom: 1px solid var(--line);
+      font-size: 1.65rem;
+      font-weight: 500;
+      letter-spacing: -0.04em;
+    }
+
+    .mobile-menu a span:last-child {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .menu-line {
+      display: block;
+      width: 18px;
+      height: 1.5px;
+      margin: 5px auto;
+      border-radius: 2px;
+      background: currentColor;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .menu-open .menu-line:first-child {
+      transform: translateY(3.25px) rotate(45deg);
+    }
+
+    .menu-open .menu-line:last-child {
+      transform: translateY(-3.25px) rotate(-45deg);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      min-height: 3.25rem;
+      padding: 0.85rem 1.35rem;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--accent-ink);
+      box-shadow: 0 12px 34px color-mix(in srgb, var(--accent) 18%, transparent);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 16px 44px color-mix(in srgb, var(--accent) 28%, transparent);
+    }
+
+    .btn-primary svg {
+      transition: transform 0.3s ease;
+    }
+
+    .btn-primary:hover svg {
+      transform: translateY(3px);
+    }
+
+    .btn-outline {
+      border-color: var(--line);
+      color: var(--text);
+      background: color-mix(in srgb, var(--surface) 70%, transparent);
+    }
+
+    .btn-outline:hover {
+      border-color: color-mix(in srgb, var(--text) 35%, transparent);
+      background: var(--surface);
+    }
+
+    .btn-small {
+      min-height: 2.65rem;
+      padding: 0.6rem 1rem;
+      font-size: 0.74rem;
+    }
+
+    /* Hero */
+    .hero-title {
+      margin: 1.35rem 0 0;
+      max-width: 10ch;
+      font-size: clamp(2.75rem, 7.6vw, 7.2rem);
+      font-weight: 500;
+      line-height: 0.98;
+      letter-spacing: -0.075em;
+    }
+
+    .hero-title .accent-word {
+      position: relative;
+      display: inline-block;
+      color: var(--accent-strong);
+    }
+
+    .hero-title .accent-word svg {
+      position: absolute;
+      right: 2%;
+      bottom: -0.08em;
+      width: 96%;
+      height: 0.16em;
+      overflow: visible;
+      color: var(--accent-strong);
+    }
+
+    .hero-reveal {
+      opacity: 0;
+      will-change: opacity, transform, filter;
+      animation: heroRise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+      animation-delay: var(--delay, 0.1s);
+    }
+
+    .stat-item {
+      min-width: 6.8rem;
+      padding-left: 1rem;
+      border-left: 1px solid var(--line);
+    }
+
+    .stat-label {
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+    }
+
+    .stat-value {
+      margin-top: 0.35rem;
+      font-size: 0.83rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* Video placeholder */
+    .tilt-wrap {
+      transform: perspective(1200px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+      transform-style: preserve-3d;
+      transition: transform 0.22s ease-out;
+      will-change: transform;
+    }
+
+    .video-shell {
+      position: relative;
+      isolation: isolate;
+      background:
+        radial-gradient(circle at 50% 37%, rgba(215, 245, 111, 0.22), transparent 31%),
+        radial-gradient(circle at 82% 82%, rgba(77, 153, 120, 0.2), transparent 42%),
+        linear-gradient(150deg, #101813 0%, #070a08 72%);
+      box-shadow: 0 32px 100px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .video-shell::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      pointer-events: none;
+      background: radial-gradient(240px circle at var(--mx, 58%) var(--my, 32%), rgba(232, 255, 188, 0.14), transparent 65%);
+    }
+
+    .video-grid {
+      opacity: 0.42;
+      background-image:
+        linear-gradient(rgba(215, 245, 111, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(215, 245, 111, 0.08) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: radial-gradient(ellipse at 50% 45%, black 12%, transparent 72%);
+      -webkit-mask-image: radial-gradient(ellipse at 50% 45%, black 12%, transparent 72%);
+    }
+
+    .orbit {
+      position: absolute;
+      top: 47%;
+      left: 50%;
+      width: 74%;
+      aspect-ratio: 1;
+      border: 1px solid rgba(215, 245, 111, 0.28);
+      border-radius: 50%;
+      transform: translate(-50%, -50%) rotateX(66deg);
+      animation: orbitSpin 28s linear infinite;
+      box-shadow: 0 0 42px rgba(215, 245, 111, 0.08);
+    }
+
+    .orbit-2 {
+      width: 98%;
+      border-color: rgba(215, 245, 111, 0.16);
+      border-style: dashed;
+      animation-duration: 42s;
+      animation-direction: reverse;
+    }
+
+    .avatar {
+      position: absolute;
+      bottom: 13%;
+      left: 50%;
+      z-index: 2;
+      width: 58%;
+      aspect-ratio: 4 / 5;
+      transform: translateX(-50%);
+      animation: avatarFloat 7s ease-in-out infinite;
+    }
+
+    .avatar-halo {
+      position: absolute;
+      top: 46%;
+      left: 50%;
+      width: 148%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(215, 245, 111, 0.34), rgba(215, 245, 111, 0.06) 38%, transparent 68%);
+      filter: blur(10px);
+      transform: translate(-50%, -50%);
+    }
+
+    .avatar-body {
+      position: absolute;
+      bottom: -6%;
+      left: 50%;
+      width: 100%;
+      height: 57%;
+      border-radius: 48% 48% 0 0 / 35% 35% 0 0;
+      background: linear-gradient(145deg, rgba(225, 236, 212, 0.48), rgba(62, 82, 69, 0.94) 34%, #0a0f0c 78%);
+      box-shadow: inset 18px 0 46px rgba(255, 255, 255, 0.08), inset -30px -20px 60px rgba(0, 0, 0, 0.82);
+      transform: translateX(-50%);
+    }
+
+    .avatar-head {
+      position: absolute;
+      top: 6%;
+      left: 50%;
+      width: 53%;
+      height: 45%;
+      border-radius: 48% 48% 46% 46% / 42% 42% 58% 58%;
+      background: radial-gradient(circle at 34% 28%, #f2f3dc 0%, #aeb9a5 12%, #4b5c50 31%, #142019 60%, #070b08 86%);
+      box-shadow: inset -18px -22px 34px rgba(0, 0, 0, 0.76), inset 10px 8px 24px rgba(255, 255, 255, 0.18), 0 28px 54px rgba(0, 0, 0, 0.46);
+      transform: translateX(-50%);
+    }
+
+    .avatar-head::before {
+      content: '';
+      position: absolute;
+      top: 12%;
+      left: 16%;
+      width: 26%;
+      height: 36%;
+      border-radius: 50%;
+      background: linear-gradient(140deg, rgba(255, 255, 255, 0.56), transparent);
+      filter: blur(6px);
+      transform: rotate(-18deg);
+    }
+
+    .avatar-visor {
+      position: absolute;
+      top: 42%;
+      right: 8%;
+      left: 8%;
+      height: 18%;
+      border-top: 1px solid rgba(225, 255, 170, 0.18);
+      border-radius: 999px;
+      background: linear-gradient(90deg, transparent, rgba(215, 245, 111, 0.18), rgba(255, 255, 255, 0.06), transparent);
+      filter: blur(1px);
+    }
+
+    .avatar-scan {
+      position: absolute;
+      inset: 4% 10% 8%;
+      z-index: 3;
+      background: linear-gradient(to bottom, transparent 0%, rgba(215, 245, 111, 0.12) 48%, rgba(215, 245, 111, 0.44) 50%, transparent 52%);
+      background-size: 100% 220%;
+      mix-blend-mode: screen;
+      mask-image: radial-gradient(ellipse at center, black 26%, transparent 72%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 26%, transparent 72%);
+      animation: scan 5s linear infinite;
+    }
+
+    .spark {
+      position: absolute;
+      z-index: 1;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+      animation: sparkFloat 6s ease-in-out infinite;
+    }
+
+    .play-ring {
+      position: absolute;
+      inset: -9px;
+      border: 1px solid rgba(215, 245, 111, 0.35);
+      border-radius: 999px;
+      animation: playPulse 2.8s ease-out infinite;
+    }
+
+    .video-shell.is-playing .avatar {
+      animation-duration: 2.4s;
+    }
+
+    .video-shell.is-playing .avatar-scan {
+      animation-duration: 1.4s;
+    }
+
+    .video-shell.is-playing .play-ring {
+      animation-duration: 1.2s;
+    }
+
+    .video-bottom {
+      background: linear-gradient(to top, rgba(4, 6, 5, 0.96), rgba(4, 6, 5, 0.58) 59%, transparent);
+    }
+
+    .video-progress {
+      height: 2px;
+      overflow: hidden;
+      border-radius: 99px;
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .video-progress span {
+      display: block;
+      width: 0;
+      height: 100%;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+      transition: width 0.18s linear;
+    }
+
+    .video-toggle .icon-play {
+      display: none;
+    }
+
+    .video-toggle.is-paused .icon-play {
+      display: block;
+    }
+
+    .video-toggle.is-paused .icon-pause {
+      display: none;
+    }
+
+    .avatar-badge {
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: 30;
+      display: inline-flex;
+      min-width: 9.1rem;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.42rem 0.7rem;
+      border: 1px solid rgba(215, 245, 111, 0.92);
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(7, 12, 9, 0.98), rgba(18, 29, 21, 0.96));
+      color: #f3f5e9;
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      line-height: 1;
+      white-space: nowrap;
+      pointer-events: none;
+      box-shadow:
+        0 0 0 1px rgba(215, 245, 111, 0.08),
+        0 0 18px rgba(215, 245, 111, 0.3),
+        inset 0 0 14px rgba(215, 245, 111, 0.06);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+
+    .avatar-badge::after {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      box-shadow: 0 0 20px rgba(215, 245, 111, 0.28);
+      pointer-events: none;
+      animation: badgeGlow 3.6s ease-in-out infinite;
+    }
+
+    .avatar-badge svg {
+      flex: 0 0 auto;
+      color: #d7f56f;
+    }
+
+    @media (max-width: 767px) {
+      .avatar-badge {
+        right: 0.8rem;
+        bottom: 0.8rem;
+        min-width: 8.45rem;
+        padding: 0.38rem 0.58rem;
+        font-size: 0.52rem;
+      }
+    }
+
+    /* Marquee */
+    .marquee {
+      overflow: hidden;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--surface) 50%, transparent);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 34s linear infinite;
+    }
+
+    .marquee:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.6rem;
+      padding: 1.05rem 1.6rem;
+      white-space: nowrap;
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .marquee-item .star {
+      font-size: 0.9rem;
+      color: var(--accent-strong);
+    }
+
+    /* Work section */
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.42rem;
+      padding: 0.55rem 0.85rem;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      color: var(--muted);
+      background: transparent;
+      font-size: 0.72rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+    }
+
+    .filter-btn sup {
+      font-size: 0.5rem;
+      color: color-mix(in srgb, var(--muted) 80%, transparent);
+    }
+
+    .filter-btn:hover {
+      color: var(--text);
+      border-color: var(--line);
+    }
+
+    .filter-btn.is-active {
+      color: var(--accent-ink);
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .filter-btn.is-active sup {
+      color: color-mix(in srgb, var(--accent-ink) 68%, transparent);
+    }
+
+    .work-card {
+      position: relative;
+    }
+
+    .work-card.is-entering {
+      animation: cardIn 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+
+    .project-art {
+      transition: transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.55s ease;
+    }
+
+    .work-card:hover .project-art {
+      transform: scale(1.035);
+      filter: saturate(1.08);
+    }
+
+    .work-card .card-arrow {
+      transition: transform 0.35s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .work-card:hover .card-arrow {
+      color: var(--accent-ink);
+      background: var(--accent);
+      transform: rotate(45deg);
+    }
+
+    .work-card .card-peek {
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .work-card:hover .card-peek {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .work-card > a {
+        transform: translateY(0);
+        transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+        will-change: transform;
+      }
+
+      .work-card:hover > a {
+        transform: translateY(-8px);
+      }
+
+      .work-card > a > div:first-child {
+        transition: border-color 0.4s ease, box-shadow 0.45s ease;
+      }
+
+      .work-card:hover > a > div:first-child {
+        border-color: color-mix(in srgb, var(--accent) 42%, var(--line));
+        box-shadow:
+          0 24px 60px color-mix(in srgb, var(--accent) 15%, transparent),
+          0 0 32px color-mix(in srgb, var(--accent) 10%, transparent);
+      }
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.34rem 0.58rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+      transition: border-color 0.25s ease, color 0.25s ease;
+    }
+
+    .tag-accent {
+      color: var(--accent-strong);
+      border-color: color-mix(in srgb, var(--accent) 48%, var(--line));
+      background: var(--accent-soft);
+    }
+
+    .work-card:hover .tag {
+      border-color: color-mix(in srgb, var(--accent) 35%, var(--line));
+    }
+
+    /* About rows */
+    .capability {
+      display: grid;
+      grid-template-columns: 3.2rem 1fr;
+      gap: 1.15rem;
+      padding: 1.55rem 0;
+      border-top: 1px solid var(--line);
+      transition: padding-left 0.35s ease;
+    }
+
+    .capability:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .capability:hover {
+      padding-left: 0.55rem;
+    }
+
+    .capability-number {
+      padding-top: 0.2rem;
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 0.92rem;
+      font-style: italic;
+      color: var(--accent-strong);
+    }
+
+    .capability h3 {
+      font-size: clamp(1.2rem, 2vw, 1.55rem);
+      font-weight: 500;
+      letter-spacing: -0.035em;
+    }
+
+    .capability p {
+      margin-top: 0.55rem;
+      max-width: 34rem;
+      font-size: 0.82rem;
+      line-height: 1.85;
+      color: var(--muted);
+    }
+
+    /* Contact */
+    .contact-panel {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: clamp(1.5rem, 4vw, 2.6rem);
+      background:
+        radial-gradient(circle at 86% 12%, var(--accent-soft), transparent 34%),
+        var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-panel::after {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -18%;
+      width: 46%;
+      aspect-ratio: 1;
+      border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+      border-radius: 50%;
+      box-shadow: 0 0 0 38px color-mix(in srgb, var(--accent) 4%, transparent), 0 0 0 76px color-mix(in srgb, var(--accent) 2%, transparent);
+      pointer-events: none;
+    }
+
+    .email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      max-width: 100%;
+      font-size: clamp(1.22rem, 3.2vw, 2.2rem);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+      word-break: break-all;
+    }
+
+    .email-link svg {
+      flex: 0 0 auto;
+      transition: transform 0.3s ease;
+    }
+
+    .email-link:hover svg {
+      transform: translate(3px, -3px);
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--muted);
+      transition: color 0.25s ease;
+    }
+
+    .social-link::after {
+      content: '↗';
+      transition: transform 0.25s ease;
+    }
+
+    .social-link:hover {
+      color: var(--text);
+    }
+
+    .social-link:hover::after {
+      transform: translate(2px, -2px);
+    }
+
+    /* Footer */
+    .footer-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .footer-contact {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      min-width: 0;
+      padding: 0.78rem 0;
+      border-bottom: 1px solid var(--line);
+      transition: color 0.25s ease;
+    }
+
+    .footer-contact:hover {
+      color: var(--accent-strong);
+    }
+
+    .footer-contact-label {
+      flex: 0 0 3.2rem;
+      font-size: 0.54rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    .footer-contact-value {
+      min-width: 0;
+      font-size: 0.8rem;
+      font-weight: 600;
+      word-break: break-all;
+    }
+
+    .footer-contact-arrow {
+      margin-left: auto;
+      flex: 0 0 auto;
+      color: var(--muted);
+      transition: transform 0.25s ease, color 0.25s ease;
+    }
+
+    .footer-contact:hover .footer-contact-arrow {
+      color: var(--accent-strong);
+      transform: translate(2px, -2px);
+    }
+
+    .social-icon {
+      display: grid;
+      width: 3rem;
+      height: 3rem;
+      place-items: center;
+      border: 1px solid transparent;
+      border-radius: 1rem;
+      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, filter 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: translateY(-4px) rotate(-3deg);
+      filter: brightness(1.06);
+    }
+
+    .social-icon svg {
+      width: 1.35rem;
+      height: 1.35rem;
+    }
+
+    /* Dialog */
+    dialog {
+      color: var(--text);
+      background: transparent;
+    }
+
+    dialog::backdrop {
+      background: rgba(2, 4, 3, 0.74);
+      -webkit-backdrop-filter: blur(9px);
+      backdrop-filter: blur(9px);
+    }
+
+    .project-dialog {
+      width: min(92vw, 760px);
+      max-width: none;
+      max-height: 88svh;
+      padding: 0;
+      border: 0;
+      border-radius: 1.75rem;
+      overflow: hidden;
+    }
+
+    .project-dialog[open] {
+      animation: dialogIn 0.38s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .dialog-shell {
+      position: relative;
+      max-height: 88svh;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 1.75rem;
+      background: var(--surface-solid);
+      box-shadow: 0 40px 120px rgba(0, 0, 0, 0.5);
+    }
+
+    .dialog-top {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(1.4rem, 5vw, 2.75rem);
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 88% 18%, var(--accent-soft), transparent 30%),
+        var(--surface-2);
+    }
+
+    .dialog-top::after {
+      content: attr(data-index);
+      position: absolute;
+      right: 1rem;
+      bottom: -1.4rem;
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 8rem;
+      font-style: italic;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--line);
+      pointer-events: none;
+    }
+
+    .dialog-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 2;
+    }
+
+    .dialog-highlight {
+      position: relative;
+      padding: 1rem 0 1rem 1.2rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .dialog-highlight::before {
+      content: '';
+      position: absolute;
+      top: 1.45rem;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 9px var(--accent);
+    }
+
+    /* Toast + back to top */
+    .toast {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      z-index: 120;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      max-width: calc(100vw - 2rem);
+      padding: 0.82rem 1.1rem;
+      border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line));
+      border-radius: 999px;
+      background: var(--surface-solid);
+      color: var(--text);
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.26);
+      font-size: 0.75rem;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, 130%);
+      transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .toast.is-visible {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    .to-top {
+      position: fixed;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      z-index: 45;
+      display: grid;
+      width: 2.8rem;
+      height: 2.8rem;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--nav-bg);
+      color: var(--text);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(12px);
+      transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.25s ease;
+    }
+
+    .to-top.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .to-top:hover {
+      background: var(--accent);
+      color: var(--accent-ink);
+    }
+
+    /* Scroll reveal */
+    .js [data-reveal] {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+      transition-delay: var(--delay, 0s);
+    }
+
+    .js [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       Keyframes
+       ========================================================= */
+    @keyframes pageEnter {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes badgeGlow {
+      0%,
+      100% {
+        opacity: 0.45;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes heroRise {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+        filter: blur(7px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes statusPulse {
+      0% {
+        opacity: 0.8;
+        transform: scale(0.65);
+      }
+      85%,
+      100% {
+        opacity: 0;
+        transform: scale(1.75);
+      }
+    }
+
+    @keyframes orbitSpin {
+      from {
+        transform: translate(-50%, -50%) rotateX(66deg) rotateZ(0deg);
+      }
+      to {
+        transform: translate(-50%, -50%) rotateX(66deg) rotateZ(360deg);
+      }
+    }
+
+    @keyframes avatarFloat {
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      50% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+    }
+
+    @keyframes scan {
+      from {
+        background-position: 0 -120%;
+      }
+      to {
+        background-position: 0 120%;
+      }
+    }
+
+    @keyframes sparkFloat {
+      0%,
+      100% {
+        opacity: 0.2;
+        transform: translateY(0) scale(0.7);
+      }
+      50% {
+        opacity: 0.9;
+        transform: translateY(-16px) scale(1.15);
+      }
+    }
+
+    @keyframes playPulse {
+      0% {
+        opacity: 0.7;
+        transform: scale(0.92);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1.28);
+      }
+    }
+
+    @keyframes videoProgress {
+      from {
+        width: 18%;
+      }
+      to {
+        width: 68%;
+      }
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes cardIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.985);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes dialogIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.97);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes spinSlow {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .spin-slow {
+      animation: spinSlow 16s linear infinite;
+    }
+
+    /* =========================================================
+       Responsive + reduced motion
+       ========================================================= */
+    @media (max-width: 767px) {
+      .site-grid {
+        background-size: calc(100% / 3) 100%;
+      }
+
+      .hero-title {
+        max-width: 100%;
+        font-size: clamp(2.35rem, 10.5vw, 2.75rem);
+      }
+
+      .stat-item {
+        min-width: 0;
+        flex: 1 1 0;
+        padding-left: 0.8rem;
+      }
+
+      .stat-value {
+        font-size: 0.75rem;
+      }
+
+      .to-top {
+        display: none;
+      }
+    }
+
+    @media (hover: none) {
+      .tilt-wrap {
+        transform: none !important;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .js [data-reveal] {
+        opacity: 1;
+        transform: none;
+      }
+
+      .cursor-glow {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-[var(--bg)] text-[var(--text)] antialiased">
+  <a
+    href="#main"
+    class="fixed left-4 top-4 z-[200] -translate-y-24 rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-bold text-[var(--accent-ink)] transition-transform focus:translate-y-0"
+  >
+    跳到主要内容
+  </a>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div id="cursorGlow" class="cursor-glow" aria-hidden="true"><span></span></div>
+  <div class="page-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- =======================================================
+       Header
+       ======================================================= -->
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50">
+    <div class="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12">
+      <a href="#top" class="group flex items-center gap-3" aria-label="返回首页">
+        <span class="grid h-9 w-9 place-items-center rounded-full border border-[var(--line)] font-editorial text-lg italic text-[var(--text)] transition-colors group-hover:border-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-[var(--accent-ink)]">
+          X
+        </span>
+        <span class="text-[0.7rem] font-bold tracking-[0.19em]">
+          XU ZHIRUO<span class="text-[var(--accent-strong)]">.</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-9 md:flex" aria-label="主导航">
+        <a class="nav-link" href="#work">作品</a>
+        <a class="nav-link" href="#operations">能力</a>
+        <a class="nav-link" href="#about">关于</a>
+        <a class="nav-link" href="#contact">联系</a>
+      </nav>
+
+      <div class="flex items-center gap-2.5">
+        <button
+          id="themeToggle"
+          class="icon-button theme-toggle"
+          type="button"
+          aria-label="切换浅色模式"
+          aria-pressed="true"
+        >
+          <svg class="sun-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6" />
+            <path d="M12 2v2.2M12 19.8V22M4.93 4.93l1.56 1.56M17.51 17.51l1.56 1.56M2 12h2.2M19.8 12H22M4.93 19.07l1.56-1.56M17.51 6.49l1.56-1.56" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          </svg>
+          <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.7 8.7 0 1 0 20.5 14.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <a href="mailto:XovoeQ525@outlook.com" class="btn btn-outline btn-small hidden sm:inline-flex">
+          联系我
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 18 18 6M9 6h9v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+
+        <button
+          id="menuToggle"
+          class="icon-button md:hidden"
+          type="button"
+          aria-label="打开菜单"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+        >
+          <span class="block">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu md:hidden" aria-hidden="true">
+      <nav aria-label="移动端导航">
+        <a href="#work" data-menu-link><span>精选作品</span><span>Work</span></a>
+        <a href="#operations" data-menu-link><span>核心能力</span><span>Capabilities</span></a>
+        <a href="#about" data-menu-link><span>关于我</span><span>About</span></a>
+        <a href="#contact" data-menu-link><span>聊一聊</span><span>Contact</span></a>
+      </nav>
+      <div class="mt-6 flex items-center justify-between gap-4">
+        <p class="text-xs leading-5 text-[var(--muted)]">开放 2027 届秋招机会<br />品牌运营 / 内容运营</p>
+        <a href="mailto:XovoeQ525@outlook.com" class="btn btn-primary btn-small">发邮件</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- =====================================================
+         Hero
+         ===================================================== -->
+    <section id="top" class="relative min-h-[100svh] overflow-hidden pb-16 pt-32 sm:pt-36 lg:flex lg:items-center lg:pb-20 lg:pt-32">
+      <div class="site-grid" aria-hidden="true"></div>
+      <div class="orb -left-44 top-24 h-[28rem] w-[28rem] bg-[radial-gradient(circle,rgba(215,245,111,0.11),transparent_68%)]" aria-hidden="true"></div>
+      <div class="orb -right-52 bottom-0 h-[34rem] w-[34rem] bg-[radial-gradient(circle,rgba(76,142,112,0.14),transparent_68%)]" aria-hidden="true"></div>
+
+      <div class="relative z-10 mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
+        <div class="grid items-center gap-14 lg:grid-cols-12 lg:gap-8">
+          <div class="lg:col-span-7">
+            <div class="hero-reveal flex flex-wrap items-center gap-3" style="--delay: 0.05s">
+              <span class="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface)] px-3 py-2 text-[0.62rem] font-semibold tracking-[0.08em] text-[var(--muted)]">
+                <span class="status-dot"></span>
+                2027 秋招 · 开放机会
+              </span>
+              <span class="text-[0.62rem] font-semibold uppercase tracking-[0.17em] text-[var(--muted)]">
+                Brand Operations / Content Strategy / Copywriting
+              </span>
+            </div>
+
+            <h1 class="hero-title hero-reveal" style="--delay: 0.12s">
+              把好想法，<br />
+              做成<span class="accent-word">好品牌<svg viewBox="0 0 240 18" fill="none" aria-hidden="true"><path d="M3 13.5C48 5.5 113 2.9 236 8.2" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" /></svg></span>。
+            </h1>
+
+            <p class="hero-reveal mt-5 font-editorial text-[clamp(1.3rem,2.5vw,1.9rem)] italic text-[var(--muted)]" style="--delay: 0.18s">
+              Design that feels alive.
+            </p>
+
+            <div class="hero-reveal mt-6 max-w-[42rem] space-y-2.5 text-[0.9rem] leading-[1.9] text-[var(--muted)] sm:text-[0.96rem]" style="--delay: 0.24s">
+              <p>我是一名具备扎实<strong class="font-semibold text-[var(--text)]">品牌策划与视觉设计</strong>落地能力的广告学应届生，擅长将创意文案与平面/包装设计深度融合，独立完成从0-1的品牌全案。</p>
+              <p>同时，我也是一名熟练掌握<strong class="font-semibold text-[var(--text)]">AI工具</strong>的新锐创作者，能够借助前沿技术将好想法转化为生动的动态视觉体验，希望能以高审美的数字名片赋能品牌的内容与视觉运营。</p>
+            </div>
+
+            <div class="hero-reveal mt-4 flex flex-wrap gap-2" style="--delay: 0.27s">
+              <span class="tag px-3 py-1.5 text-[0.62rem]">品牌运营</span>
+              <span class="tag px-3 py-1.5 text-[0.62rem]">内容策划 / 文案</span>
+              <span class="tag px-3 py-1.5 text-[0.62rem]">新媒体排版</span>
+              <span class="tag px-3 py-1.5 text-[0.62rem]">品牌活动 / 受众洞察</span>
+              <span class="tag px-3 py-1.5 text-[0.62rem]">AI 内容工作流</span>
+              <span class="tag tag-accent px-3 py-1.5 text-[0.62rem]">05 份完整案例</span>
+            </div>
+
+            <div class="hero-reveal mt-8 flex flex-wrap items-center gap-3" style="--delay: 0.3s">
+              <a id="exploreWork" href="#work" class="btn btn-primary" aria-controls="work">
+                浏览作品
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 4v16m0 0 6-6m-6 6-6-6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <!-- resume.pdf 与 index.html 位于同一目录，点击后直接下载 -->
+              <a
+                id="resumeDownload"
+                href="./resume.pdf"
+                download="resume.pdf"
+                type="application/pdf"
+                class="btn btn-outline"
+                aria-label="下载简历 PDF"
+              >
+                下载简历
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <span class="hidden text-[0.65rem] font-medium text-[var(--muted)] sm:inline">PDF · 255 KB</span>
+            </div>
+
+            <div class="hero-reveal mt-10 flex max-w-xl gap-3 border-t border-[var(--line)] pt-6" style="--delay: 0.36s">
+              <div class="stat-item">
+                <p class="stat-label">STATUS</p>
+                <p class="stat-value">秋招进行中</p>
+              </div>
+              <div class="stat-item">
+                <p class="stat-label">BASE</p>
+                <p class="stat-value">上海 · 可远程</p>
+              </div>
+              <div class="stat-item">
+                <p class="stat-label">FOCUS</p>
+                <p class="stat-value">品牌运营 / 内容运营</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-reveal lg:col-span-5" style="--delay: 0.22s">
+            <div class="relative mx-auto w-full max-w-[500px] lg:max-w-[620px]" data-tilt>
+              <div class="absolute -left-3 top-[14%] z-30 hidden rounded-full border border-[var(--line)] bg-[var(--nav-bg)] px-4 py-2.5 text-[0.62rem] font-bold tracking-[0.13em] shadow-xl backdrop-blur-xl sm:flex sm:items-center sm:gap-2">
+                <span class="status-dot"></span>
+                AI DIGITAL TWIN
+              </div>
+
+              <div class="absolute -right-2 top-[7%] z-20 hidden font-editorial text-sm italic text-[var(--muted)] sm:block" style="writing-mode: vertical-rl;">
+                Showreel / 2026
+              </div>
+
+              <div id="videoFrame" class="video-shell aspect-video overflow-hidden rounded-[1.6rem] border border-white/10 sm:rounded-[2rem]">
+                <video
+                  id="heroVideo"
+                  class="absolute inset-0 h-full w-full object-cover"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="auto"
+                  aria-label="徐芷若的 AI 数字人介绍视频"
+                >
+                  <source src="./my-video.mp4" type="video/mp4" />
+                  你的浏览器暂不支持视频播放。
+                </video>
+
+                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/20"></div>
+
+                <div class="absolute inset-x-0 top-0 z-20 flex items-center justify-between bg-gradient-to-b from-black/45 to-transparent p-5 pb-10 text-[0.56rem] font-bold tracking-[0.17em] text-white/70">
+                  <span class="flex items-center gap-2">
+                    <span class="h-1.5 w-1.5 rounded-full bg-[#d7f56f] shadow-[0_0_8px_#d7f56f]"></span>
+                    DIGITAL TWIN / SHOWREEL
+                  </span>
+                  <span id="videoDuration">00:10</span>
+                </div>
+
+                <div class="absolute inset-x-0 bottom-0 z-20 px-5 pb-4 pr-40">
+                  <div class="video-progress">
+                    <span id="videoProgressBar"></span>
+                  </div>
+                </div>
+
+                <span class="avatar-badge" aria-label="AI Digital Avatar">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="m12 2.8 1.75 5.45L19.2 10l-5.45 1.75L12 17.2l-1.75-5.45L4.8 10l5.45-1.75L12 2.8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                  </svg>
+                  AI Digital Avatar
+                </span>
+              </div>
+
+              <div class="mt-4 flex items-end justify-between gap-4 border-t border-[var(--line)] px-1 pt-4">
+                <div>
+                  <p class="text-[0.56rem] font-bold tracking-[0.18em] text-[var(--muted)]">SHOWREEL / INTRO</p>
+                  <p class="mt-1 text-sm font-medium tracking-[-0.02em]">你好，我是徐芷若。</p>
+                  <p class="mt-1 text-[0.65rem] text-[var(--muted)]">AI 3D 虚拟形象 · 个人介绍</p>
+                </div>
+                <div class="flex shrink-0 items-center gap-2">
+                  <span class="hidden rounded-full border border-[var(--line)] px-2.5 py-1 text-[0.54rem] font-semibold tracking-[0.11em] text-[var(--muted)] sm:inline-flex">
+                    MUTED · LOOP
+                  </span>
+                  <button
+                    id="videoToggle"
+                    type="button"
+                    class="video-toggle inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] px-3 py-1.5 text-[0.56rem] font-semibold text-[var(--muted)] transition-colors hover:border-[var(--accent)] hover:text-[var(--text)]"
+                    aria-label="暂停视频"
+                  >
+                    <svg class="icon-pause" width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M7 5h3v14H7zM14 5h3v14h-3z" />
+                    </svg>
+                    <svg class="icon-play" width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M8 5.5v13l10-6.5-10-6.5Z" />
+                    </svg>
+                    <span id="videoToggleText">暂停</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Marquee
+         ===================================================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-item"><span>Brand Operations</span><span class="star">✳</span><span>Content Strategy</span><span class="star">✳</span><span>Copywriting</span><span class="star">✳</span><span>Social Editorial</span><span class="star">✳</span><span>Campaign</span><span class="star">✳</span><span>AI Content</span><span class="star">✳</span></div>
+        <div class="marquee-item"><span>Brand Operations</span><span class="star">✳</span><span>Content Strategy</span><span class="star">✳</span><span>Copywriting</span><span class="star">✳</span><span>Social Editorial</span><span class="star">✳</span><span>Campaign</span><span class="star">✳</span><span>AI Content</span><span class="star">✳</span></div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         Selected work
+         ===================================================== -->
+        <section id="work" class="relative py-20 sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12">
+        <div class="mb-10 flex flex-col justify-between gap-7 lg:mb-14 lg:flex-row lg:items-end" data-reveal>
+          <div>
+            <p class="eyebrow">Selected Work / 01—05</p>
+            <h2 class="mt-5 text-[clamp(2.15rem,5.2vw,4.6rem)] font-medium leading-[1.02] tracking-[-0.06em]">
+              一些做过的<span class="font-editorial italic text-[var(--accent-strong)]">事</span>。
+            </h2>
+          </div>
+          <p class="max-w-sm text-sm leading-7 text-[var(--muted)] lg:text-right">
+            品牌策划、包装、主视觉与角色系统。<br class="hidden sm:block" />
+            点击作品封面，会在新标签页中打开完整 PDF 预览。
+          </p>
+        </div>
+
+        <div class="mb-9 flex items-center justify-between gap-4 border-y border-[var(--line)] py-3.5" data-reveal style="--delay: 0.08s">
+          <p class="text-[0.58rem] font-bold tracking-[0.17em] text-[var(--muted)]">05 PROJECTS · PDF PREVIEW</p>
+          <p class="hidden text-[0.58rem] font-bold tracking-[0.17em] text-[var(--muted)] sm:block">BRAND / PACKAGING / KEY VISUAL / POSTER / IP</p>
+        </div>
+
+        <div id="workGrid" class="grid grid-cols-1 gap-x-5 gap-y-12 md:grid-cols-2 lg:grid-cols-6">
+          <!-- 01 品牌全案设计 -->
+          <article class="work-card group md:col-span-1 lg:col-span-3" data-reveal style="--delay: 0.04s">
+            <a
+              href="./work-1.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full text-left"
+              aria-label="在新标签页中打开《品牌全案设计》PDF"
+            >
+              <div class="relative aspect-[4/3] overflow-hidden rounded-[1.45rem] border border-[var(--line)] bg-[#0c2e26]">
+                <div class="project-art absolute inset-0">
+                  <div
+                    class="absolute inset-0 opacity-[0.1]"
+                    style="background-image: linear-gradient(rgba(215,245,111,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(215,245,111,.6) 1px, transparent 1px); background-size: 52px 52px;"
+                  ></div>
+                  <span class="absolute -right-6 -top-16 font-editorial text-[16rem] italic leading-none text-[#d7f56f] opacity-[0.07]">B</span>
+                  <div class="relative flex h-full flex-col justify-between p-6 sm:p-8">
+                    <div class="flex items-center justify-between text-[0.55rem] font-bold tracking-[0.19em] text-white/45">
+                      <span>BRAND SYSTEM / 01</span>
+                      <span>PDF</span>
+                    </div>
+                    <div class="grid grid-cols-[1fr_auto] items-end gap-4">
+                      <div>
+                        <p class="font-editorial text-[clamp(3.4rem,6vw,5.8rem)] italic leading-[0.78] text-[#d7f56f]">Brand</p>
+                        <h3 class="mt-4 text-[clamp(1.9rem,3vw,2.7rem)] font-medium tracking-[-0.045em] text-[#f1efe6]">品牌全案设计</h3>
+                      </div>
+                      <span class="mb-1 grid h-11 w-11 place-items-center rounded-full border border-white/20 text-white/60 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:border-[#d7f56f] group-hover:bg-[#d7f56f] group-hover:text-[#0b0d08]">↗</span>
+                    </div>
+                    <div class="flex items-end justify-between gap-4 border-t border-white/10 pt-4 text-[0.55rem] font-semibold tracking-[0.16em] text-white/35">
+                      <span>STRATEGY · IDENTITY · GUIDELINE</span>
+                      <span>2026</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-[0.61rem] font-bold tracking-[0.15em] text-[var(--muted)]">品牌视觉 · 全案 / 2026</p>
+                  <h3 class="mt-2 text-[1.28rem] font-medium tracking-[-0.035em]">品牌全案设计</h3>
+                  <p class="mt-2.5 max-w-[30rem] text-[0.79rem] leading-[1.8] text-[var(--muted)]">从策略定位、核心概念到视觉识别与应用规范，完整呈现一套可落地的品牌系统。</p>
+                  <div class="mt-3.5 flex flex-wrap gap-1.5">
+                    <span class="tag">品牌策略</span>
+                    <span class="tag">视觉识别</span>
+                    <span class="tag">品牌手册</span>
+                    <span class="tag">PDF · 0.5 MB</span>
+                  </div>
+                </div>
+                <span class="card-arrow mt-1 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--line)] text-[var(--muted)]">↗</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- 02 包装设计 -->
+          <article class="work-card group md:col-span-1 lg:col-span-3" data-reveal style="--delay: 0.1s">
+            <a
+              href="./work-2.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full text-left"
+              aria-label="在新标签页中打开《包装设计》PDF"
+            >
+              <div class="relative aspect-[4/3] overflow-hidden rounded-[1.45rem] border border-[var(--line)] bg-[#e9dcc4]">
+                <div class="project-art absolute inset-0">
+                  <div
+                    class="absolute inset-0 opacity-[0.14]"
+                    style="background-image: linear-gradient(rgba(43,45,36,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(43,45,36,.5) 1px, transparent 1px); background-size: 64px 64px;"
+                  ></div>
+                  <div class="absolute right-[8%] top-[16%] h-[46%] w-[27%] rotate-6 border border-[#2b2d24]/20"></div>
+                  <div class="absolute right-[13%] top-[22%] h-[34%] w-[17%] -rotate-6 border border-[#c05f3b]/45"></div>
+                  <div class="relative flex h-full flex-col justify-between p-6 sm:p-8">
+                    <div class="flex items-center justify-between text-[0.55rem] font-bold tracking-[0.19em] text-[#2b2d24]/45">
+                      <span>PACKAGING / 02</span>
+                      <span>PDF</span>
+                    </div>
+                    <div class="grid grid-cols-[1fr_auto] items-end gap-4">
+                      <div>
+                        <p class="font-editorial text-[clamp(3.4rem,6vw,5.8rem)] italic leading-[0.78] text-[#c05f3b]">Pack</p>
+                        <h3 class="mt-4 text-[clamp(1.9rem,3vw,2.7rem)] font-medium tracking-[-0.045em] text-[#25261f]">包装设计</h3>
+                      </div>
+                      <span class="mb-1 grid h-11 w-11 place-items-center rounded-full border border-[#2b2d24]/20 text-[#25261f]/55 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:border-[#25261f] group-hover:bg-[#25261f] group-hover:text-[#e9dcc4]">↗</span>
+                    </div>
+                    <div class="flex items-end justify-between gap-4 border-t border-[#2b2d24]/15 pt-4 text-[0.55rem] font-semibold tracking-[0.16em] text-[#2b2d24]/40">
+                      <span>STRUCTURE · MATERIAL · PRINT</span>
+                      <span>2026</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-[0.61rem] font-bold tracking-[0.15em] text-[var(--muted)]">包装设计 · 结构与视觉 / 2026</p>
+                  <h3 class="mt-2 text-[1.28rem] font-medium tracking-[-0.035em]">包装设计</h3>
+                  <p class="mt-2.5 max-w-[30rem] text-[0.79rem] leading-[1.8] text-[var(--muted)]">围绕货架识别与开箱体验，建立从结构、材质到图形语言的包装方案。</p>
+                  <div class="mt-3.5 flex flex-wrap gap-1.5">
+                    <span class="tag">包装结构</span>
+                    <span class="tag">图形语言</span>
+                    <span class="tag">印刷落地</span>
+                    <span class="tag">PDF · 2.9 MB</span>
+                  </div>
+                </div>
+                <span class="card-arrow mt-1 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--line)] text-[var(--muted)]">↗</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- 03 主视觉设计 -->
+          <article class="work-card group lg:col-span-2" data-reveal style="--delay: 0.04s">
+            <a
+              href="./work-3.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full text-left"
+              aria-label="在新标签页中打开《主视觉设计》PDF"
+            >
+              <div class="relative aspect-[4/3] overflow-hidden rounded-[1.45rem] border border-[var(--line)] bg-[#213cf0]">
+                <div class="project-art absolute inset-0">
+                  <div class="absolute -right-[18%] -top-[28%] h-[80%] w-[80%] rounded-full border border-white/20"></div>
+                  <div class="absolute -right-[8%] -top-[18%] h-[58%] w-[58%] rounded-full border border-[#d7f56f]/40"></div>
+                  <div class="relative flex h-full flex-col justify-between p-6">
+                    <div class="flex items-center justify-between text-[0.55rem] font-bold tracking-[0.19em] text-white/55">
+                      <span>KEY VISUAL / 03</span>
+                      <span>PDF</span>
+                    </div>
+                    <div>
+                      <p class="font-editorial text-[clamp(3.2rem,5vw,4.6rem)] italic leading-[0.78] text-[#f3f0e4]">Key Visual</p>
+                      <h3 class="mt-3 text-[clamp(1.65rem,2.6vw,2.2rem)] font-medium tracking-[-0.04em] text-white">主视觉设计</h3>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-white/15 pt-4 text-[0.52rem] font-semibold tracking-[0.14em] text-white/45">
+                      <span>CAMPAIGN · ART DIRECTION</span>
+                      <span class="grid h-8 w-8 place-items-center rounded-full border border-white/25 text-white/70 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:border-[#d7f56f] group-hover:bg-[#d7f56f] group-hover:text-[#0b0d08]">↗</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-[0.61rem] font-bold tracking-[0.15em] text-[var(--muted)]">主视觉 · Campaign / 2026</p>
+                  <h3 class="mt-2 text-[1.28rem] font-medium tracking-[-0.035em]">主视觉设计</h3>
+                  <p class="mt-2.5 text-[0.79rem] leading-[1.8] text-[var(--muted)]">用统一的视觉概念组织活动信息，让品牌在线上线下保持同一种表达。</p>
+                  <div class="mt-3.5 flex flex-wrap gap-1.5">
+                    <span class="tag">主视觉</span>
+                    <span class="tag">艺术指导</span>
+                    <span class="tag">版式系统</span>
+                    <span class="tag">PDF · 3.9 MB</span>
+                  </div>
+                </div>
+                <span class="card-arrow mt-1 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--line)] text-[var(--muted)]">↗</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- 04 海报设计 -->
+          <article class="work-card group lg:col-span-2" data-reveal style="--delay: 0.1s">
+            <a
+              href="./work-4.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full text-left"
+              aria-label="在新标签页中打开《海报设计》PDF"
+            >
+              <div class="relative aspect-[4/3] overflow-hidden rounded-[1.45rem] border border-[var(--line)] bg-[#ee4a2f]">
+                <div class="project-art absolute inset-0">
+                  <div class="absolute inset-x-0 top-1/2 h-px bg-[#f9f2e4]/20"></div>
+                  <div class="absolute bottom-0 left-1/2 top-0 w-px bg-[#f9f2e4]/15"></div>
+                  <span class="absolute -bottom-8 -right-2 font-editorial text-[10rem] italic leading-none text-[#1b1c17]/10">04</span>
+                  <div class="relative flex h-full flex-col justify-between p-6">
+                    <div class="flex items-center justify-between text-[0.55rem] font-bold tracking-[0.19em] text-[#f9f2e4]/55">
+                      <span>POSTER / 04</span>
+                      <span>PDF</span>
+                    </div>
+                    <div>
+                      <p class="font-editorial text-[clamp(3rem,4.8vw,4.4rem)] italic leading-[0.78] text-[#f9f2e4]">Poster</p>
+                      <h3 class="mt-3 text-[clamp(1.65rem,2.6vw,2.2rem)] font-medium tracking-[-0.04em] text-[#f9f2e4]">海报设计</h3>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-[#f9f2e4]/20 pt-4 text-[0.52rem] font-semibold tracking-[0.14em] text-[#f9f2e4]/45">
+                      <span>PRINT · TYPE · LAYOUT</span>
+                      <span class="grid h-8 w-8 place-items-center rounded-full border border-[#f9f2e4]/30 text-[#f9f2e4]/75 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:border-[#f9f2e4] group-hover:bg-[#f9f2e4] group-hover:text-[#ee4a2f]">↗</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-[0.61rem] font-bold tracking-[0.15em] text-[var(--muted)]">海报设计 · 排版实验 / 2026</p>
+                  <h3 class="mt-2 text-[1.28rem] font-medium tracking-[-0.035em]">海报设计</h3>
+                  <p class="mt-2.5 text-[0.79rem] leading-[1.8] text-[var(--muted)]">以字体、网格与色彩为工具，在有限画面里建立清晰的视觉节奏。</p>
+                  <div class="mt-3.5 flex flex-wrap gap-1.5">
+                    <span class="tag">字体排版</span>
+                    <span class="tag">海报</span>
+                    <span class="tag">视觉叙事</span>
+                    <span class="tag">PDF · 2.4 MB</span>
+                  </div>
+                </div>
+                <span class="card-arrow mt-1 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--line)] text-[var(--muted)]">↗</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- 05 IP形象设计 -->
+          <article class="work-card group md:col-span-2 lg:col-span-2" data-reveal style="--delay: 0.16s">
+            <a
+              href="./work-5.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full text-left"
+              aria-label="在新标签页中打开《IP形象设计》PDF"
+            >
+              <div class="relative aspect-[4/3] overflow-hidden rounded-[1.45rem] border border-[var(--line)] bg-[#d9ccff] md:aspect-[16/8] lg:aspect-[4/3]">
+                <div class="project-art absolute inset-0">
+                  <div class="absolute right-[7%] top-[16%] grid h-[42%] aspect-square place-items-center rounded-full border border-[#1a1b16]/15">
+                    <div class="flex gap-3">
+                      <span class="h-2.5 w-2.5 rounded-full bg-[#1a1b16]"></span>
+                      <span class="h-2.5 w-2.5 rounded-full bg-[#1a1b16]"></span>
+                    </div>
+                    <span class="absolute bottom-[28%] h-3 w-10 rounded-b-full border-b-2 border-[#1a1b16]/55"></span>
+                  </div>
+                  <div class="relative flex h-full flex-col justify-between p-6">
+                    <div class="flex items-center justify-between text-[0.55rem] font-bold tracking-[0.19em] text-[#1a1b16]/45">
+                      <span>IP CHARACTER / 05</span>
+                      <span>PDF</span>
+                    </div>
+                    <div>
+                      <p class="font-editorial text-[clamp(3.2rem,5vw,4.6rem)] italic leading-[0.78] text-[#f0563c]">IP</p>
+                      <h3 class="mt-3 text-[clamp(1.65rem,2.6vw,2.2rem)] font-medium tracking-[-0.04em] text-[#1a1b16]">IP形象设计</h3>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-[#1a1b16]/15 pt-4 text-[0.52rem] font-semibold tracking-[0.14em] text-[#1a1b16]/40">
+                      <span>CHARACTER · SYSTEM · STORY</span>
+                      <span class="grid h-8 w-8 place-items-center rounded-full border border-[#1a1b16]/20 text-[#1a1b16]/65 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:border-[#1a1b16] group-hover:bg-[#1a1b16] group-hover:text-[#d9ccff]">↗</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-[0.61rem] font-bold tracking-[0.15em] text-[var(--muted)]">IP 形象 · 角色系统 / 2026</p>
+                  <h3 class="mt-2 text-[1.28rem] font-medium tracking-[-0.035em]">IP形象设计</h3>
+                  <p class="mt-2.5 text-[0.79rem] leading-[1.8] text-[var(--muted)]">从角色设定到视觉规范，构建可延展、可沟通的 IP 形象与应用体系。</p>
+                  <div class="mt-3.5 flex flex-wrap gap-1.5">
+                    <span class="tag">角色设定</span>
+                    <span class="tag">IP 视觉</span>
+                    <span class="tag">延展应用</span>
+                    <span class="tag">PDF · 6.3 MB</span>
+                  </div>
+                </div>
+                <span class="card-arrow mt-1 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[var(--line)] text-[var(--muted)]">↗</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Core capabilities
+         ===================================================== -->
+    <section id="operations" class="border-t border-[var(--line)] py-20 sm:py-24 lg:py-28">
+      <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12">
+        <div class="grid gap-8 lg:grid-cols-12 lg:items-end" data-reveal>
+          <div class="lg:col-span-7">
+            <p class="eyebrow">Core Capabilities / 核心运营能力</p>
+            <h2 class="mt-5 max-w-[12ch] text-[clamp(2.15rem,4.7vw,4.4rem)] font-medium leading-[1.06] tracking-[-0.06em]">
+              内容有策略，<br />
+              表达有<span class="font-editorial italic text-[var(--accent-strong)]">章法</span>。
+            </h2>
+          </div>
+          <p class="max-w-sm text-sm leading-7 text-[var(--muted)] lg:col-span-5 lg:text-right">
+            从选题、文案、活动到 AI 工作流，把品牌表达组织成可持续的内容系统。
+          </p>
+        </div>
+
+        <div class="mt-12 grid border-t border-[var(--line)] md:grid-cols-3">
+          <article class="border-b border-[var(--line)] py-8 last:border-b-0 md:border-b-0 md:border-r md:px-7 md:first:pl-0 md:last:border-r-0" data-reveal style="--delay: 0.04s">
+            <div class="flex items-start justify-between gap-4">
+              <span class="font-editorial text-[2.6rem] italic leading-none text-[var(--accent-strong)]">01</span>
+              <span class="pt-1 text-[0.52rem] font-bold tracking-[0.16em] text-[var(--muted)]">COPY / LAYOUT</span>
+            </div>
+            <h3 class="mt-7 text-[1.1rem] font-medium leading-snug tracking-[-0.03em]">文案策划与新媒体排版</h3>
+            <p class="mt-3 text-[0.8rem] leading-[1.9] text-[var(--muted)]">
+              从选题、文案到版式与发布节奏，让每一次表达都有清晰的品牌语气和阅读秩序。
+            </p>
+            <div class="mt-5 flex flex-wrap gap-1.5">
+              <span class="tag">选题策划</span>
+              <span class="tag">文案表达</span>
+              <span class="tag">新媒体排版</span>
+            </div>
+          </article>
+
+          <article class="border-b border-[var(--line)] py-8 last:border-b-0 md:border-b-0 md:border-r md:px-7 md:last:border-r-0" data-reveal style="--delay: 0.1s">
+            <div class="flex items-start justify-between gap-4">
+              <span class="font-editorial text-[2.6rem] italic leading-none text-[var(--accent-strong)]">02</span>
+              <span class="pt-1 text-[0.52rem] font-bold tracking-[0.16em] text-[var(--muted)]">INSIGHT / CAMPAIGN</span>
+            </div>
+            <h3 class="mt-7 text-[1.1rem] font-medium leading-snug tracking-[-0.03em]">品牌活动与受众洞察</h3>
+            <p class="mt-3 text-[0.8rem] leading-[1.9] text-[var(--muted)]">
+              围绕目标受众与传播目标，参与活动创意、内容规划与执行；用洞察决定说什么、对谁说、怎么说。
+            </p>
+            <div class="mt-5 flex flex-wrap gap-1.5">
+              <span class="tag">受众洞察</span>
+              <span class="tag">活动策划</span>
+              <span class="tag">传播执行</span>
+            </div>
+          </article>
+
+          <article class="py-8 md:px-7 md:last:pr-0" data-reveal style="--delay: 0.16s">
+            <div class="flex items-start justify-between gap-4">
+              <span class="font-editorial text-[2.6rem] italic leading-none text-[var(--accent-strong)]">03</span>
+              <span class="pt-1 text-[0.52rem] font-bold tracking-[0.16em] text-[var(--muted)]">AI / WORKFLOW</span>
+            </div>
+            <h3 class="mt-7 text-[1.1rem] font-medium leading-snug tracking-[-0.03em]">AI 内容创作与效率提升</h3>
+            <p class="mt-3 text-[0.8rem] leading-[1.9] text-[var(--muted)]">
+              将 AI 工具嵌入选题、文案、视觉与资料整理流程，提升内容产能，同时保持审美与品牌一致性。
+            </p>
+            <div class="mt-5 flex flex-wrap gap-1.5">
+              <span class="tag">AI 内容创作</span>
+              <span class="tag">视觉生成</span>
+              <span class="tag">流程提效</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         About
+         ===================================================== -->
+    <section id="about" class="border-t border-[var(--line)] py-20 sm:py-24 lg:py-32">
+      <div class="mx-auto grid max-w-[1440px] gap-14 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:px-12">
+        <div class="lg:col-span-5" data-reveal>
+          <p class="eyebrow">About / 关于我</p>
+          <h2 class="mt-5 max-w-[9ch] text-[clamp(2.1rem,4.7vw,4.4rem)] font-medium leading-[1.06] tracking-[-0.06em]">
+            让策略，<br />
+            被<span class="font-editorial italic text-[var(--accent-strong)]">看见</span>。
+          </h2>
+          <p class="mt-6 max-w-md text-[0.9rem] leading-[1.95] text-[var(--muted)]">
+            我关注品牌从策略到内容的完整链路：先想清楚为什么，再决定说什么、长什么样。擅长内容策划、视觉表达与 AI 工作流。
+          </p>
+          <div class="mt-7 flex flex-wrap gap-2">
+            <span class="tag">Content Strategy</span>
+            <span class="tag">Copywriting</span>
+            <span class="tag">Visual Identity</span>
+            <span class="tag">AI Workflow</span>
+          </div>
+          <div class="mt-10 flex items-center gap-3">
+            <span class="grid h-10 w-10 place-items-center rounded-full border border-[var(--line)] font-editorial text-lg italic">X</span>
+            <div>
+              <p class="text-xs font-semibold">徐芷若 · Xu Zhiruo</p>
+              <p class="mt-0.5 text-[0.62rem] text-[var(--muted)]">广告学应届生 · 品牌运营 / 内容运营</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7" data-reveal style="--delay: 0.1s">
+          <p class="mb-2 text-[0.6rem] font-bold tracking-[0.18em] text-[var(--muted)]">Working Principles / 工作方式</p>
+          <article class="capability">
+            <span class="capability-number">01</span>
+            <div>
+              <h3>先理解，再表达</h3>
+              <p>先厘清品牌目标、受众与使用场景，再决定内容说什么、视觉长什么样。让每一次表达都有清晰的来处。</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="tag">品牌目标</span>
+                <span class="tag">受众</span>
+                <span class="tag">使用场景</span>
+              </div>
+            </div>
+          </article>
+          <article class="capability">
+            <span class="capability-number">02</span>
+            <div>
+              <h3>让内容与视觉同频</h3>
+              <p>文案、版式与视觉使用同一套品牌语气，让每个触点都像来自同一个品牌。保持克制，也保持记忆点。</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="tag">内容</span>
+                <span class="tag">版式</span>
+                <span class="tag">视觉</span>
+              </div>
+            </div>
+          </article>
+          <article class="capability">
+            <span class="capability-number">03</span>
+            <div>
+              <h3>用 AI 放大判断</h3>
+              <p>让 AI 承担资料整理、初稿与批量生产，把人的判断留给策略、审美与细节。效率提升，但不牺牲质感。</p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="tag">AI 工作流</span>
+                <span class="tag">效率</span>
+                <span class="tag">品控</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Contact
+         ===================================================== -->
+    <section id="contact" class="pb-8 pt-8 sm:pb-10">
+      <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12">
+        <div class="contact-panel px-6 py-10 sm:px-10 sm:py-14 lg:px-16 lg:py-16" data-reveal>
+          <div class="relative z-10 grid gap-10 lg:grid-cols-12 lg:items-end">
+            <div class="lg:col-span-7">
+              <p class="eyebrow">Open for opportunities · 2027</p>
+              <h2 class="mt-5 max-w-[11ch] text-[clamp(2.2rem,5.4vw,5rem)] font-medium leading-[1.02] tracking-[-0.065em]">
+                下一件有意思的事，<span class="font-editorial italic text-[var(--accent-strong)]">一起做？</span>
+              </h2>
+              <p class="mt-5 max-w-md text-[0.88rem] leading-[1.9] text-[var(--muted)]">
+                正在寻找品牌运营、内容运营或文案策划相关的秋招机会。也欢迎聊聊有趣的想法、合作或单纯喝杯咖啡。
+              </p>
+            </div>
+
+            <div class="lg:col-span-5 lg:text-right">
+              <p class="text-[0.6rem] font-bold tracking-[0.18em] text-[var(--muted)]">SAY HELLO</p>
+              <a class="email-link mt-3 hover:text-[var(--accent-strong)]" href="mailto:XovoeQ525@outlook.com">
+                XovoeQ525@outlook.com
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M6 18 18 6M9 6h9v9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <button id="copyEmail" type="button" class="btn btn-outline btn-small mt-4">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="8" y="8" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.7" />
+                  <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+                复制邮箱
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="border-t border-[var(--line)] bg-[var(--bg-2)]">
+    <div class="mx-auto max-w-[1440px] px-5 pb-8 pt-14 sm:px-8 md:pb-16 lg:px-12 lg:pt-20">
+      <div class="grid gap-12 lg:grid-cols-12 lg:gap-8">
+        <div class="lg:col-span-5">
+          <a href="#top" class="group inline-flex items-center gap-3" aria-label="回到顶部">
+            <span class="grid h-10 w-10 place-items-center rounded-full border border-[var(--line)] font-editorial text-lg italic transition-colors group-hover:border-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-[var(--accent-ink)]">X</span>
+            <span class="text-[0.7rem] font-bold tracking-[0.19em]">XU ZHIRUO<span class="text-[var(--accent-strong)]">.</span></span>
+          </a>
+          <p class="mt-6 max-w-xs text-[0.84rem] leading-7 text-[var(--muted)]">
+            品牌运营 / 内容运营 / 文案策划。<br />
+            用内容策略，让品牌被看见。
+          </p>
+        </div>
+
+        <div class="lg:col-span-4">
+          <p class="footer-label">Contact / 联系方式</p>
+          <div class="mt-4">
+            <a href="mailto:XovoeQ525@outlook.com" class="footer-contact">
+              <span class="footer-contact-label">邮箱</span>
+              <span class="footer-contact-value">XovoeQ525@outlook.com</span>
+              <span class="footer-contact-arrow">↗</span>
+            </a>
+            <a href="tel:18955205226" class="footer-contact">
+              <span class="footer-contact-label">电话</span>
+              <span class="footer-contact-value">18955205226</span>
+              <span class="footer-contact-arrow">↗</span>
+            </a>
+            <a href="./resume.pdf" download="resume.pdf" type="application/pdf" class="footer-contact">
+              <span class="footer-contact-label">简历</span>
+              <span class="footer-contact-value">下载 PDF · 255 KB</span>
+              <span class="footer-contact-arrow">↓</span>
+            </a>
+          </div>
+          <p class="mt-4 text-[0.68rem] text-[var(--muted)]">微信可通过手机号搜索添加。</p>
+        </div>
+
+        <div class="lg:col-span-3">
+          <p class="footer-label lg:text-right">Social / 社交媒体</p>
+          <div class="mt-5 flex flex-wrap items-start gap-4 lg:justify-end">
+            <div class="flex flex-col items-center gap-2">
+              <button
+                id="wechatContact"
+                type="button"
+                class="social-icon bg-[#07c160] text-white shadow-[0_12px_30px_rgba(7,193,96,.25)]"
+                aria-label="复制手机号，通过微信添加"
+                title="复制手机号，通过微信添加"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M9.7 4C5.9 4 3 6.4 3 9.4c0 1.6.9 3.1 2.3 4.1l-.6 2 2.2-1.1c.8.2 1.6.4 2.4.4h.5c-.2-.5-.3-1-.3-1.6 0-3 2.9-5.4 6.5-5.4h.5C15.9 5.3 13 4 9.7 4Zm-2.2 3.1a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm4.3 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" />
+                  <path d="M21 13.2c0-2.4-2.4-4.4-5.3-4.4s-5.3 2-5.3 4.4 2.4 4.4 5.3 4.4c.7 0 1.3-.1 1.9-.3l1.8.9-.5-1.6c1.3-.8 2.1-2 2.1-3.4Zm-7-1.2a.82.82 0 1 1 0 1.64.82.82 0 0 1 0-1.64Zm3.6 0a.82.82 0 1 1 0 1.64.82.82 0 0 1 0-1.64Z" />
+                </svg>
+              </button>
+              <span class="text-[0.56rem] font-semibold text-[var(--muted)]">微信</span>
+            </div>
+
+            <div class="flex flex-col items-center gap-2">
+              <a
+                href="https://www.xiaohongshu.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon bg-[#ff2442] text-white shadow-[0_12px_30px_rgba(255,36,66,.2)]"
+                aria-label="打开小红书"
+                title="打开小红书"
+              >
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 5.6c2.6-1.2 5.3-1.2 8 0v12.8c-2.7-1.2-5.4-1.2-8 0V5.6Zm16 0c-2.6-1.2-5.3-1.2-8 0v12.8c2.7-1.2 5.4-1.2 8 0V5.6Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                  <path d="M7 8.5h2M7 11.5h2M15 8.5h2M15 11.5h2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+                </svg>
+              </a>
+              <span class="text-[0.56rem] font-semibold text-[var(--muted)]">小红书</span>
+            </div>
+
+            <div class="flex flex-col items-center gap-2">
+              <a
+                href="mailto:XovoeQ525@outlook.com"
+                class="social-icon border-[var(--line)] bg-[var(--surface)] text-[var(--text)]"
+                aria-label="发送邮件"
+                title="发送邮件"
+              >
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7" />
+                  <path d="m4.5 7 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <span class="text-[0.56rem] font-semibold text-[var(--muted)]">邮箱</span>
+            </div>
+
+            <div class="flex flex-col items-center gap-2">
+              <a
+                href="tel:18955205226"
+                class="social-icon border-[var(--line)] bg-[var(--surface)] text-[var(--text)]"
+                aria-label="拨打电话"
+                title="拨打电话"
+              >
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7.2 3.5 9.4 8l-2 1.4c.8 2.4 2.7 4.3 5.1 5.1l1.4-2 4.5 2.2-.7 3c-.2.9-1 1.5-1.9 1.4C8.8 18.4 5.6 15.2 4.4 8.2c-.1-.9.5-1.7 1.4-1.9l1.4-.3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <span class="text-[0.56rem] font-semibold text-[var(--muted)]">电话</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-14 flex flex-col gap-4 border-t border-[var(--line)] pt-6 text-[0.62rem] text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 徐芷若 XU ZHIRUO. All rights reserved.</p>
+        <div class="flex flex-wrap items-center gap-4">
+          <span id="localTime">SHANGHAI · --:--</span>
+          <span class="hidden h-3 w-px bg-[var(--line)] sm:block"></span>
+          <span>Designed &amp; coded with care.</span>
+          <a href="#top" class="font-semibold text-[var(--muted)] transition-colors hover:text-[var(--text)]">TOP ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" class="to-top" type="button" aria-label="回到顶部">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 20V4m0 0-6 6m6-6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <span class="h-2 w-2 shrink-0 rounded-full bg-[var(--accent)] shadow-[0_0_10px_var(--accent)]"></span>
+    <span id="toastText">操作成功</span>
+  </div>
+
+  <script>
+    /* =========================================================
+       1. Theme
+       ========================================================= */
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+
+    function syncThemeUI() {
+      const isLight = root.classList.contains('light');
+      themeToggle.setAttribute('aria-label', isLight ? '切换深色模式' : '切换浅色模式');
+      themeToggle.setAttribute('aria-pressed', String(!isLight));
+      metaThemeColor.setAttribute('content', isLight ? '#f2efe7' : '#080a09');
+    }
+
+    function setTheme(isLight, persist = true) {
+      root.classList.toggle('light', isLight);
+      root.classList.toggle('dark', !isLight);
+      syncThemeUI();
+      if (persist) {
+        try {
+          localStorage.setItem('xuzhiruo-theme', isLight ? 'light' : 'dark');
+        } catch (error) {
+          /* localStorage 不可用时，主题仍然可以切换 */
+        }
+      }
+    }
+
+    syncThemeUI();
+    themeToggle.addEventListener('click', () => {
+      setTheme(!root.classList.contains('light'));
+    });
+
+    /* =========================================================
+       2. Mobile menu
+       ========================================================= */
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function setMenu(open) {
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+      mobileMenu.classList.toggle('is-open', open);
+      mobileMenu.setAttribute('aria-hidden', String(!open));
+      document.body.classList.toggle('menu-open', open);
+    }
+
+    menuToggle.addEventListener('click', () => {
+      setMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    document.querySelectorAll('[data-menu-link]').forEach((link) => {
+      link.addEventListener('click', () => setMenu(false));
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) setMenu(false);
+    });
+
+    /* =========================================================
+       3. Header state, progress, back-to-top
+       ========================================================= */
+    const header = document.getElementById('siteHeader');
+    const progress = document.getElementById('scrollProgress');
+    const toTop = document.getElementById('toTop');
+    let ticking = false;
+
+    function updateScrollUI() {
+      const scrollY = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = maxScroll > 0 ? Math.min(scrollY / maxScroll, 1) : 0;
+
+      header.classList.toggle('is-scrolled', scrollY > 24);
+      progress.style.transform = `scaleX(${ratio})`;
+      toTop.classList.toggle('is-visible', scrollY > 620);
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScrollUI);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    updateScrollUI();
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    const cursorGlow = document.getElementById('cursorGlow');
+    if (cursorGlow && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      const halo = cursorGlow.querySelector('span');
+      let glowFrame = null;
+      let pointerX = 0;
+      let pointerY = 0;
+
+      window.addEventListener('pointermove', (event) => {
+        pointerX = event.clientX;
+        pointerY = event.clientY;
+
+        if (glowFrame === null) {
+          glowFrame = window.requestAnimationFrame(() => {
+            const size = halo.offsetWidth || 544;
+            halo.style.transform = `translate3d(${pointerX - size / 2}px, ${pointerY - size / 2}px, 0)`;
+            cursorGlow.classList.add('is-active');
+            glowFrame = null;
+          });
+        }
+      }, { passive: true });
+
+      document.addEventListener('mouseleave', () => cursorGlow.classList.remove('is-active'));
+      window.addEventListener('blur', () => cursorGlow.classList.remove('is-active'));
+    }
+
+    const exploreWork = document.getElementById('exploreWork');
+    if (exploreWork) {
+      exploreWork.addEventListener('click', (event) => {
+        const workSection = document.getElementById('work');
+        if (!workSection) return;
+
+        event.preventDefault();
+        workSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try {
+          window.history.replaceState(null, '', '#work');
+        } catch (error) {
+          /* 某些本地预览环境不允许修改地址栏，滚动行为不受影响 */
+        }
+      });
+    }
+
+    /* =========================================================
+       4. Scroll reveal
+       ========================================================= */
+    const revealItems = document.querySelectorAll('[data-reveal]');
+
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -36px'
+      });
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add('is-visible'));
+    }
+
+    /* =========================================================
+       7. Hero video + toast
+       ========================================================= */
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toastText');
+    let toastTimer;
+
+    function showToast(message) {
+      toastText.textContent = message;
+      toast.classList.add('is-visible');
+      window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(() => toast.classList.remove('is-visible'), 3200);
+    }
+
+    const heroVideo = document.getElementById('heroVideo');
+    const videoDuration = document.getElementById('videoDuration');
+    const videoProgressBar = document.getElementById('videoProgressBar');
+    const videoToggle = document.getElementById('videoToggle');
+    const videoToggleText = document.getElementById('videoToggleText');
+    let userPaused = false;
+
+    function formatVideoTime(seconds) {
+      if (!Number.isFinite(seconds) || seconds < 0) return '00:00';
+      const minutes = Math.floor(seconds / 60);
+      const remainingSeconds = Math.floor(seconds % 60);
+      return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
+    }
+
+    function playHeroVideo() {
+      heroVideo.muted = true;
+      const playAttempt = heroVideo.play();
+      if (playAttempt) playAttempt.catch(() => {});
+    }
+
+    function syncVideoToggle() {
+      const paused = heroVideo.paused;
+      videoToggle.classList.toggle('is-paused', paused);
+      videoToggle.setAttribute('aria-label', paused ? '播放视频' : '暂停视频');
+      videoToggleText.textContent = paused ? '播放' : '暂停';
+    }
+
+    videoToggle.addEventListener('click', () => {
+      if (heroVideo.paused) {
+        userPaused = false;
+        playHeroVideo();
+      } else {
+        userPaused = true;
+        heroVideo.pause();
+      }
+    });
+
+    heroVideo.addEventListener('loadedmetadata', () => {
+      videoDuration.textContent = formatVideoTime(heroVideo.duration);
+    });
+
+    heroVideo.addEventListener('play', syncVideoToggle);
+    heroVideo.addEventListener('playing', syncVideoToggle);
+    heroVideo.addEventListener('pause', syncVideoToggle);
+
+    heroVideo.addEventListener('timeupdate', () => {
+      if (!heroVideo.duration) return;
+      const progress = (heroVideo.currentTime / heroVideo.duration) * 100;
+      videoProgressBar.style.width = `${Math.min(progress, 100)}%`;
+    });
+
+    heroVideo.addEventListener('canplay', playHeroVideo, { once: true });
+    heroVideo.addEventListener('error', () => {
+      showToast('视频加载失败，请检查 my-video.mp4 是否存在');
+    });
+
+    playHeroVideo();
+    syncVideoToggle();
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && heroVideo.paused && !userPaused) playHeroVideo();
+    });
+
+    /* =========================================================
+       8. Copy email
+       ========================================================= */
+    const email = 'XovoeQ525@outlook.com';
+    const copyEmail = document.getElementById('copyEmail');
+    const resumeDownload = document.getElementById('resumeDownload');
+
+    resumeDownload.addEventListener('click', () => {
+      window.setTimeout(() => showToast('正在下载简历 PDF'), 180);
+    });
+
+    copyEmail.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(email);
+        showToast('邮箱已复制：' + email);
+      } catch (error) {
+        window.location.href = 'mailto:' + email;
+      }
+    });
+
+    const wechatContact = document.getElementById('wechatContact');
+    wechatContact.addEventListener('click', async () => {
+      const phone = '18955205226';
+      try {
+        await navigator.clipboard.writeText(phone);
+        showToast('手机号已复制，可在微信中搜索添加');
+      } catch (error) {
+        showToast('微信：请通过手机号 ' + phone + ' 联系');
+      }
+    });
+
+    /* =========================================================
+       9. Tilt interaction
+       ========================================================= */
+    const tiltWrap = document.querySelector('[data-tilt]');
+
+    if (tiltWrap && window.matchMedia('(pointer: fine)').matches) {
+      const videoShell = tiltWrap.querySelector('.video-shell');
+
+      tiltWrap.addEventListener('pointermove', (event) => {
+        const rect = tiltWrap.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width;
+        const y = (event.clientY - rect.top) / rect.height;
+        tiltWrap.style.setProperty('--rx', `${(0.5 - y) * 5}deg`);
+        tiltWrap.style.setProperty('--ry', `${(x - 0.5) * 7}deg`);
+        videoShell.style.setProperty('--mx', `${x * 100}%`);
+        videoShell.style.setProperty('--my', `${y * 100}%`);
+      });
+
+      tiltWrap.addEventListener('pointerleave', () => {
+        tiltWrap.style.setProperty('--rx', '0deg');
+        tiltWrap.style.setProperty('--ry', '0deg');
+        videoShell.style.setProperty('--mx', '58%');
+        videoShell.style.setProperty('--my', '32%');
+      });
+    }
+
+    /* =========================================================
+       10. Escape + live Shanghai time
+       ========================================================= */
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+        setMenu(false);
+      }
+    });
+
+    function updateShanghaiTime() {
+      const time = new Intl.DateTimeFormat('zh-CN', {
+        timeZone: 'Asia/Shanghai',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      }).format(new Date());
+      document.getElementById('localTime').textContent = `SHANGHAI · ${time}`;
+    }
+
+    updateShanghaiTime();
+    window.setInterval(updateShanghaiTime, 30000);
+  </script>
+</body>
+</html>

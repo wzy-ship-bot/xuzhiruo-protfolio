@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="徐芷若作品集图标">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#142019" />
+      <stop offset="1" stop-color="#070a08" />
+    </linearGradient>
+    <linearGradient id="lime" x1="20" y1="18" x2="46" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ecffa9" />
+      <stop offset="1" stop-color="#b9df45" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(18 14) rotate(45) scale(46)">
+      <stop stop-color="#d7f56f" stop-opacity="0.28" />
+      <stop offset="1" stop-color="#d7f56f" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="18" fill="url(#bg)" />
+  <rect x="1" y="1" width="62" height="62" rx="17" fill="none" stroke="#d7f56f" stroke-opacity="0.22" />
+  <rect width="64" height="64" rx="18" fill="url(#glow)" />
+
+  <path d="M20 18 44 46M44 18 20 46" stroke="url(#lime)" stroke-width="6" stroke-linecap="round" />
+  <circle cx="50" cy="14" r="3" fill="#d7f56f" />
+</svg>
